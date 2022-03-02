@@ -1,0 +1,169 @@
+2.1
+siehe naiverTicketautomat TicketautomatStarter
+
+2.2
+siehe naiverTicketautomat TicketautomatStarter
+
+2.3
+siehe naiverTicketautomat Ticketautomatstarter
+
+2.4
+Es wird der zu zahlende Betrag abgespeichert bei der Instanzierung
+Dieser Wert wird wieder ausgegeben bei Ticket drucken, zusätzlich wird der einbezahlte Betrag wieder auf 0 gesetzt
+Die Beträge, die einbezahlt werden addiert und zurück gegeben wenn gewünscht
+Der einbezahlte Betrag hat aber keinen Einfluss auf den Ausdruck des Tickets.
+
+2.5
+Der einzige Unteschied ist die Zahl beim Cent-Betrag
+
+2.6
+public class Student(){}
+public class Laborkurs(){}
+
+2.7
+falsche Reihenfolge führt dazu, dass Klasse nicht erkannt wird
+
+2.8
+public darf weggelassen werden, macht je nach Zugriffsschutz auch Sinn
+
+2.9
+class kann nicht weggelassen werden.
+
+2.10
+Datenfelder:  preis, bisherGezahlt, gesamtsumme
+Konstruktor:  Ticketautomat(int ticketpreis)
+Methoden:     gibPreis, gibBisherGezahltenBetrag, geldEinwerfen, ticketDrucken
+
+2.11
+Konstruktor hat als Rückgabewert sich selber -> nie void
+Name muss dem, der Klasse entsprechen
+
+2.12
+zaehler ist ein int (Zahl)
+sprecher ist ein Student
+zentral ist ein Server
+
+2.13
+lebendig, tutor und spiel
+
+2.14
+Student, Server, Person, Spiel
+
+2.15
+andere Reihenfolgen sind nicht erlaubt.
+
+2.16
+Semikolon ist notwendig
+
+2.17
+private int status;
+
+2.18
+gehört zu Klasse "Student"
+
+2.19
+2 Parameter -> String und double
+
+2.20
+2x String
+
+2.21
+public Haustier(String seinName){
+  name = seinName;
+}
+
+2.22
+public Datum(String month, int day, int year){}
+
+2.23
+methodenNamen sind anders, andere Klassenvariable wird returned
+
+2.24
+"Wie viel habe ich bereits bezahlt?"
+
+2.25
+müsste nicht geändert werden, Name wird aber weniger Aussagekräftig mit dieser Änderung
+
+2.26
+siehe naiverTicketautomat -> Ticketautomat -> Methode gibGesamtsumme
+
+2.27
+keine Ahnung nicht ausgeführt, wahrschleinlich etwas wie missing return statement
+
+2.28
+gibPreis hat als Rückgabewert einen int, ticketDrucken hat keinen Rückgabewert also void
+
+2.29
+Nein, diese Methoden haben keinen Rückgabewert -> erkennbar am void im Kopf
+Nicht nötig in diesem Fall für weitere Programmausführung
+
+2.30
+ausprobieren und allenfalls inspizieren
+
+2.31
+Konstruktor heisst immer gleich wie Klasse
+Klasse eigentlich immer mit Nomen benannt
+
+2.32
+in naiverTicketautomat -> Ticketautomat -> setzePreis umgesetzt
+
+2.33
+punktestand += punkte;
+
+2.34
+ja, punktestand hat danach einen höheren Wert
+
+2.35
+preis -= betrag;
+
+2.36
+Meine Katze hat gruene Augen
+
+2.37
+in naiverTicketautomat -> Ticketautomat -> meldung
+
+2.38
+# preis Cent.
+
+2.39
+# preis Cent. wird ausgegeben.
+
+2.40
+Könnte sofern der Betrag zusätzlich statisch mitgegeben wird.
+
+2.41
+in naiverTicketautomat -> Ticketautomat -> preisAusgeben
+
+2.42
+in naiverTicketautomat -> TicketautomatStarter -> execute2_42
+unterschiedlicher Betrag, da unteschiedliche Instanzen
+
+2.43
+in naiverTicketautomat -> Ticketautomat -> zusätzlicher Konstruktor
+Parameter muss nicht mitgegeben werden -> Preis standardmässig 1000 Cent
+kann geändert werden mit setzePreis
+
+2.44
+Test wurde nicht gemacht
+
+2.45
+in naiverTicketautomat -> Ticketautomat -> leeren
+keine Paramteter nötig, verändernde Methode
+
+2.46
+in bessererTicketautomat -> TicketautomatStarter -> execute2_46
+
+2.47
+Meldung erscheint nicht wenn man 0 Cent einwirft... sowieso unrealistisch
+
+2.48
+im Kommentar in bessererTicketautomat -> Ticketautomat -> geldEinwerfen
+
+2.49
+z.B sichtbarkeit und ja war angemessen mit nur zwei Werten
+
+2.50
+Unterschied liegt im praktischen darin, nicht zuviel bezahlt werden kann und weiterhin guthaben bestehen bleibt.
+
+2.51
+Ja ist möglich, dadurch erhält der User aber keine Informationen mehr wieso er kein Ticket erhält.
