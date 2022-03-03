@@ -101,4 +101,10 @@ public class Ticketautomat {
     bisherGezahlt = 0;
     return wechselgeld;
   }
+
+  public int entleeren() {
+    int gesamtsumme = this.gesamtsumme;
+    this.gesamtsumme = 0;
+    return gesamtsumme;
+  }
 }

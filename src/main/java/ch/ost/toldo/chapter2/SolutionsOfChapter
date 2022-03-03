@@ -167,3 +167,65 @@ Unterschied liegt im praktischen darin, nicht zuviel bezahlt werden kann und wei
 
 2.51
 Ja ist möglich, dadurch erhält der User aber keine Informationen mehr wieso er kein Ticket erhält.
+
+2.52
+Nein, if (bisherGezahlt >= preis) verhindert das.
+
+2.53
+Seite 626m BlueJ
+
+2.54
+int ersparnis = preis * rabatt;
+
+2.55
+int durchschnitt = gesamt / anzahl;
+
+2.56
+if (preis > budget){
+  System.out.println("zu teuer");
+} else {
+  System.out.println("passt");
+}
+
+2.57
+if (preis > budget){
+  System.out.println("zu teuer, Budget ist " + budget);
+} else {
+  System.out.println("passt");
+}
+
+2.58
+bisherGezahlt wird zurückgesetzt, das zu viel gezahlte Geld geht verloren
+
+2.59
+bisherGezahlt wird nicht mehr auf 0 gesetzt, da das return-Statement vor dem reset kommt
+nach return darf nichts mehr gemacht werden -> kompiliert nicht
+
+2.60
+Variable preis ist nur innerhalb des Konstruktors verfügbar -> ticketpreis geht verloren
+um Instanzvariabel zu nutzen anstatt "int preis" nur "preis" oder "this.preis" schreiben
+
+2.61
+siehe bessererTicketautomat -> Ticketautomat -> entleeren
+
+2.62
+public void ticketDrucken() {
+  int nochZuZahlen = preis - bisherGezahlt;
+  if (nochZuZahlen <= 0) {
+    // Den Ausdruck eines Tickets simulieren.
+    System.out.println("##################");
+    System.out.println("# Die BlueJ-Linie");
+    System.out.println("# Ticket");
+    System.out.println("# " + preis + " Cent.");
+    System.out.println("##################\n");
+
+    // Die Gesamtsumme um den Ticketpreis erhöhen.
+    gesamtsumme = gesamtsumme + preis;
+    // Den Preis von der bisherigen Bezahlung abziehen.
+    bisherGezahlt = bisherGezahlt - preis;
+  } else {
+    System.out.println("Sie müssen noch mindestens " +
+            nochZuZahlen +
+            " Cent einwerfen.");
+  }
+}
