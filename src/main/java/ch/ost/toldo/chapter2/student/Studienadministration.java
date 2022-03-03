@@ -10,7 +10,7 @@ public class Studienadministration {
   /**
    * Name der Hochschule
    */
-  private final String nameDerHochschule;
+  private String nameDerHochschule;
   /**
    * aktuelle Studenteninstanz
    */

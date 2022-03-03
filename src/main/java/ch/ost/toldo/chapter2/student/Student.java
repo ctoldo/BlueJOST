@@ -14,11 +14,11 @@ public class Student {
   /**
    * Nachname
    */
-  private final String name;
+  private String name;
   /**
    * Vorname
    */
-  private final String vorname;
+  private String vorname;
   /**
    * Geburtsjarhr
    */
@@ -26,7 +26,7 @@ public class Student {
   /**
    * Info ob Student immatrikuliert ist
    */
-  private final boolean immatrikuliert;
+  private boolean immatrikuliert;
 
   /**
    * Konstruktor für Student
