@@ -340,3 +340,15 @@ t2.gibBisherGezahltenBetrag ist kein korrekter Methodenaufruf -> Fehler
 t1.geldEinwerfen(500) erhöht bisherGezahlten Betrag um 500
 t2.gibBisherBezahltenBetrag fehlt das Semikolon -> Fehler
 -> mit Semikolon würde aber 500 zurückkommen, da t1 und t2 auf die gleichen Daten verweisen.
+
+2.83 - 2.85
+siehe buchAufgabe
+
+2.86
+unveränderlich, da Wert bei Konstruktion fix mitgegeben wird.
+
+2.87 - 2.92
+siehe buchAufgabe
+
+2.93
+siehe heizungsaufgabe
