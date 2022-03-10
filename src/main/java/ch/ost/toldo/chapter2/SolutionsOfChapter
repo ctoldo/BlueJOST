@@ -229,3 +229,114 @@ public void ticketDrucken() {
             " Cent einwerfen.");
   }
 }
+
+2.63
+zusätzliches Feld für Rabatt-Betrag
+neue Methode zum Rabatt setzen
+neue Methode die Preis unter Berücksichtigung vom Rabatt angibt
+überall wo auf preis zugegriffen wird Methode aufrufen (obige Mehtode)
+siehe 2_63 -> bessererTicketautomat -> Ticketautomat
+
+2.64
+Name = gibName
+Ergebnistyp = String
+
+2.65
+Name Methode = setzeKreditrahmen
+Name Parameter = rahmen
+Typ Parameter = int
+
+2.66
+public class Person{}
+
+2.67
+private String name;
+private int alter;
+private String nummer;
+private int kreditrahmen
+
+2.68
+public Modul(String modulnummer) {
+  nummer = modulnummer;
+}
+
+2.69
+public Person(String meinName, int meinAlter) {
+  name = meinName;
+  alter = meinAlter;
+}
+
+2.70
+public int gibAlter() {
+  return alter;
+}
+
+2.71
+public String gibName() {
+  return name;
+}
+
+2.72
+public void setzeAlter(int alter) {
+  this.alter = alter;
+}
+
+2.73
+public Person {
+  private String name;
+
+  public void detailsAusgeben() {
+    System.out.println("Der Name der Person ist " + name);
+  }
+}
+
+2.74
+student_1:Student
+name: Benjamin Jonson
+matrikelnr: 738321
+
+2.75
+Henr557
+
+2.76
+IndexOutOfBoundsExeption
+zu wenig zeichen für Substring
+
+2.77
+public Student(String vollerName, String matNr) {
+  if(name.lenght() < 4) {
+    System.out.println("Name zu kurz");
+  }
+  if (matNr < 3) {
+    System.out.println("Matrikelnummer zu kurz");
+  }
+  name = vollerName;
+  matrikelnummer = matNr;
+}
+
+2.78
+public String gibLoginName() {
+  String shortName = name.length() < 4 ? name : name.substring(0, 4);
+  String matNr = matrikelnummer.lenght() < 3 ? matrikelnummer : matrikelnummer.substring(0, 3);
+  return shortname + matNr;
+}
+
+2.79
+102
+"Seewolf"
+"See9"
+"93See"
+"See39"
+"w"
+Fehler -> IndexOutOfBounds
+
+2.80
+Fehler, da Semikolon fehlt -> kompiliert bei mir ohne Direkteingabe gar nicht erst
+
+2.81
+t2.gibBisherGezahltenBetrag ist kein korrekter Methodenaufruf -> Fehler
+
+2.82
+t1.geldEinwerfen(500) erhöht bisherGezahlten Betrag um 500
+t2.gibBisherBezahltenBetrag fehlt das Semikolon -> Fehler
+-> mit Semikolon würde aber 500 zurückkommen, da t1 und t2 auf die gleichen Daten verweisen.
