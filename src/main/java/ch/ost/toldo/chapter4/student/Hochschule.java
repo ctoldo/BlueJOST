@@ -65,7 +65,7 @@ public class Hochschule {
     }
 
     //oder mit while:
-    /*
+    /**
     int i = 1;
     while (i <= anzahlObjekte) {
       Student student = new Student("Muster" + i, "Hans" + i);
