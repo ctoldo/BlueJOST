@@ -63,5 +63,16 @@ public class Hochschule {
       student.setzeGeburtsJahr(2000);
       studentAufnehmen(student);
     }
+
+    //oder mit while:
+    int i = 1;
+    while (i <= anzahlObjekte) {
+      Student student = new Student("Muster" + i, "Hans" + i);
+      student.setzeBesuchtLehrgang(lehrgang);
+      student.setzeEmail("hans.muster" + i + "@fh.ch");
+      student.setzeGeburtsJahr(2000);
+      studentAufnehmen(student);
+      i++;
+    }
   }
 }
