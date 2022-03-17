@@ -37,8 +37,12 @@ public class Hochschule {
   }
 
   public boolean studentLoeschen(int index) {
-    Student removedStudent = studenten.remove(index);
-    return removedStudent != null;
+    if (index < studenten.size() && index <= 0) {
+      Student removedStudent = studenten.remove(index);
+      return removedStudent != null;
+    } else {
+      return false;
+    }
   }
 
   public int studentLoeschen(String stringImNamen) {
