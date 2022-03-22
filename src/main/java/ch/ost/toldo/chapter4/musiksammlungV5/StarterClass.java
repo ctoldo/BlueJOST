@@ -9,7 +9,8 @@ public class StarterClass {
   public static void main(String[] args) throws InterruptedException {
 //    aufgabe4_37();
 //    aufgabe4_38();
-    aufgabe4_43();
+//    aufgabe4_43();
+    aufgabe4_45();
   }
 
   private static void aufgabe4_37() {
@@ -37,6 +38,11 @@ public class StarterClass {
     musikSammlung.spieleZufaelligerTrack();
     Thread.sleep(5000);
     musikSammlung.beendeAbspielen();
+  }
+
+  private static void aufgabe4_45() {
+    MusikSammlung musikSammlung = new MusikSammlung();
+    musikSammlung.spieleTracksInZuefaelligerReihenfolge();
   }
 }
 

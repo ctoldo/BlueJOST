@@ -5,6 +5,11 @@
  */
 package ch.ost.toldo.chapter4;
 
+import ch.ost.toldo.chapter4.artikelbestand.Artikel;
+import ch.ost.toldo.chapter4.artikelbestand.Bestandsverwalter;
+import ch.ost.toldo.chapter4.auktion.Auktion;
+import ch.ost.toldo.chapter4.auktion.AuktionStarterClass;
+import ch.ost.toldo.chapter4.auktion.Person;
 import ch.ost.toldo.chapter4.musiksammlungV1.StarterClass;
 import ch.ost.toldo.chapter4.musiksammlungV2.MusikSammlung;
 import ch.ost.toldo.chapter4.musiksammlungV5.Track;
@@ -305,7 +310,142 @@ public class SolutionsOfChapter4 {
 
   /**
    * 4.45
-   *
+   * siehe {@link ch.ost.toldo.chapter4.musiksammlungV5.MusikSammlung#spieleTracksInZuefaelligerReihenfolge()}
    */
 
+  /**
+   * 4.46
+   * nicht gemacht
+   */
+
+  /**
+   * 4.47
+   * boolean erfolgreich = gewaehlterPosten.hoeheresGebot(new Gebot(bieter, betrag));
+   * siehe {@link ch.ost.toldo.chapter4.auktion.Auktion#gibGebotAb(int, Person, long)}
+   */
+
+  /**
+   * 4.48
+   * @see AuktionStarterClass#aufgabe4_48()
+   * @see Auktion#beenden()
+   */
+
+  /**
+   * 4.49
+   * @see Auktion#gibUnverkaufte()
+   */
+
+  /**
+   * 4.50
+   * Die Indexnummer innerhalb der Liste würde nicht mehr mit gibNummer()-1 übereinstimmen.
+   * Dies würde zu Fehlern führen.
+   * Man müsste über die Posten iterieren und prüfen, ob die Nummer übreinstimmt mit der geforderten.
+   */
+
+  /**
+   * 4.51
+   * @see Auktion#gibPosten(int)
+   */
+
+  /**
+   * 4.52
+   * @see Auktion#entfernePosten(int)
+   * @see AuktionStarterClass#aufgabe4_52()
+   */
+
+  /**
+   * 4.53
+   * ArrayList ist ein Array
+   * LinkedList ist eine verkettete Liste
+   * -> ArrayList ist für direkten Zugriff schneller, da indexbasiert
+   * -> LinkedList ist für Manipulationen besser (CRUD) -> Datensetze sind doppelt miteinander verknüpft
+   */
+
+  /**
+   * 4.54
+   * @see Verein#beigetretenImMonat(int)
+   */
+
+  /**
+   * 4.55
+   * @see Verein#entfernen(int, int)
+   */
+
+  /**
+   * 4.56
+   * @see Bestandsverwalter#alleArtikelAnzeigen()
+   */
+
+  /**
+   * 4.57
+   * @see Bestandsverwalter#findeArtikel(int)
+   */
+
+  /**
+   * 4.58
+   * @see Bestandsverwalter#mengeImBestand(int)
+   */
+
+  /**
+   * 4.59
+   * @see Bestandsverwalter#aufnehmen(int, int)
+   */
+
+  /**
+   * 4.60
+   * @see Bestandsverwalter#printDetailsOfProductsWithFewerAmount(int)
+   * @see Bestandsverwalter#neuerArtikel(Artikel)
+   * @see Bestandsverwalter#findeArtikel(String)
+   */
+
+  /**
+   * 4.61
+   * do-while Schleife funktioniert identisch wie normale while Schleife mit der Ausnahme, dass der Inhalt der {} bereits einmal ausgeführt
+   * wird, bevor das erste mal die Bedingung geprüft wird.
+   * Syntax:
+   * do {
+   *   ...
+   * } while (Bedingung);
+   *
+   * für Ausgabe von 1-10
+   * int i = 1
+   * do {
+   *  System.out.println(i);
+   *  i++;
+   * } while (i <= 10);
+   */
+
+  /**
+   * 4.62
+   * @see ch.ost.toldo.chapter4.musiksammlungV3.MusikSammlung#alleDateienAusgeben()
+   * Funktioniert nur, wenn mindestens 1 Objekt in der Sammlung vorhanden ist. Ansonsten crasht es.
+   * Könnte jedoch mit einem if abgefangen werden.
+   * Nicht empfehlenswert in der Praxis das so zu lösen
+   */
+
+  /**
+   * 4.63
+   * @see ch.ost.toldo.chapter4.musiksammlungV4.MusikSammlung#findeErste(String)
+   * Kommentar ist relevant
+   * Gleiches Problem wie in 4.62 -> Mindestens 1 Objekt muss in der Sammlung sein. Ansonsten crasht es.
+   * Auch hier könnte das mit einem if gelöst werden.
+   * In der Praxis ist aber die normale while-Schleife besser (allerdings nicht so scheusslich geschrieben wie ursprünglich hier gemacht wurde...
+   */
+
+  /**
+   * 4.64
+   * wird benutzt als Alternative für if-elseif-else wenn viele Optionen vorhanden sind -> lesbarer
+   *
+   * switch (automarke) {
+   *   case "Audi":
+   *      System.out.println("Es ist ein Audi.");
+   *      break; //break ist dazu da, dass die anderen Fälle nicht auch noch probiert werden (v. a. default Pfad)
+   *   case "Seat":
+   *      System.out.println("Es ist ein Seat.");
+   *      break;
+   *   default: //für alle anderen Fälle, die nicht schon abgedeckt sind
+   *      System.out.println("Es ist eine unbekannte Marke.");
+   *      break; //hier zwar nicht mehr nötig aber schöner so...
+   * }
+   */
 }

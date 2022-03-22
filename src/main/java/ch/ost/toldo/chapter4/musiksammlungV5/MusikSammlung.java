@@ -1,9 +1,6 @@
 package ch.ost.toldo.chapter4.musiksammlungV5;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Optional;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Eine Klasse zur Verwaltung von Audiotracks.
@@ -101,11 +98,10 @@ public class MusikSammlung {
 
   public void spieleTracksInZuefaelligerReihenfolge() {
     ArrayList<Track> tracks = new ArrayList<>(this.tracks);
-    Random random = new Random();
-    while (tracks.size() > 0) {
-
+    Collections.shuffle(tracks);
+    for (Track track : tracks) {
+      player.dateiAnspielen(track.gibDateiname());
     }
-
   }
 
   /**

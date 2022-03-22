@@ -57,6 +57,13 @@ public class MusikSammlung {
    * Gib eine Liste aller Dateien in der Sammlung aus.
    */
   public void alleDateienAusgeben() {
+    /* Aufgabe 4.62
+    int i = 0;
+    do {
+      System.out.println(dateien.get(i));
+    } while (i < dateien.size());
+    */
+
     for (String dateiname : dateien) {
       System.out.println(dateiname);
     }
@@ -123,16 +130,17 @@ public class MusikSammlung {
 
   /**
    * spielt Songs des übergeben Autors ab
+   *
    * @param interpret interpret, dessen Lieder angpesielt werden sollen
    */
-    public void interpretenDateienAnspielen(String interpret) {
-        for (String dateiname : dateien) {
-          String fileName = dateiname.substring(dateiname.lastIndexOf("/") + 1);
-            if (fileName.startsWith(interpret)) {
-                player.dateiAnspielen(dateiname);
-            }
-        }
+  public void interpretenDateienAnspielen(String interpret) {
+    for (String dateiname : dateien) {
+      String fileName = dateiname.substring(dateiname.lastIndexOf("/") + 1);
+      if (fileName.startsWith(interpret)) {
+        player.dateiAnspielen(dateiname);
+      }
     }
+  }
 
   /**
    * Stelle fest, ob der gegebene Index für die Sammlung gültig ist.
