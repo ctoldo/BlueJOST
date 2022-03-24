@@ -67,11 +67,11 @@ public class Hochschule {
 
     while (it.hasNext()) {
       String emailAddress = it.next();
-      if (emailAddress.contains(suchString)) {
+      Student student = studentenMap.get(emailAddress);
+      if (student.gibName().contains(suchString)) {
         it.remove();
-        Student student = studentenMap.get(emailAddress);
         studentenListe.remove(student);
-        studentenMap.remove(student.gibEmail());
+        studentenMap.remove(emailAddress);
         anzahlGeloeschte++;
       }
     }
