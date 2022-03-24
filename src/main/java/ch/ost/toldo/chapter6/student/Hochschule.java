@@ -62,18 +62,19 @@ public class Hochschule {
    * @return Anzahl gelöschter Studenten
    */
   public int loescheStudenten(String email) {
-    int index = 0;
-    Iterator<Student> it = studentenListe.iterator();
+    int anzahlGeloeschte = 0;
+    Iterator<String> it = studentenMap.keySet().iterator();
 
     while (it.hasNext()) {
-      Student student = it.next();
-      if (student.gibEmail().contains(email)) {
+      String emailAddress = it.next();
+      if (emailAddress.contains(email)) {
         it.remove();
+        Student student = studentenMap.get(emailAddress);
         studentenListe.remove(student);
         studentenMap.remove(student.gibEmail());
-        index++;
+        anzahlGeloeschte++;
       }
     }
-    return index;
+    return anzahlGeloeschte;
   }
 }
