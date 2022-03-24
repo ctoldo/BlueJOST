@@ -58,7 +58,7 @@ public class Hochschule {
   /**
    * Student löschen mit gegebenem Lehrgang
    *
-   * @param suchString Email nach der gesucht werden soll
+   * @param suchString Text nach dem gesucht werden soll
    * @return Anzahl gelöschter Studenten
    */
   public int loescheStudenten(String suchString) {
