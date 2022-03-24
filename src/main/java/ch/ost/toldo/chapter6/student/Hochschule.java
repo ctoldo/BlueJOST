@@ -58,16 +58,16 @@ public class Hochschule {
   /**
    * Student löschen mit gegebenem Lehrgang
    *
-   * @param email Email nach der gesucht werden soll
+   * @param suchString Email nach der gesucht werden soll
    * @return Anzahl gelöschter Studenten
    */
-  public int loescheStudenten(String email) {
+  public int loescheStudenten(String suchString) {
     int anzahlGeloeschte = 0;
     Iterator<String> it = studentenMap.keySet().iterator();
 
     while (it.hasNext()) {
       String emailAddress = it.next();
-      if (emailAddress.contains(email)) {
+      if (emailAddress.contains(suchString)) {
         it.remove();
         Student student = studentenMap.get(emailAddress);
         studentenListe.remove(student);
