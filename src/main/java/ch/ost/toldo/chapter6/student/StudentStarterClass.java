@@ -19,11 +19,8 @@ public class StudentStarterClass {
     //alphabetisch ausgeben
     hs.ausgebenAlphabetisch();
 
-    int i1 = hs.loescheStudenten("claudio");
-    System.out.println(i1);
-
-    int i = hs.loescheStudenten("ost.ch");
-    System.out.println(i);
+    int anzahlGeloeschte = hs.loescheStudenten("Claudio");
+    System.out.println("Anzahl gelöschte: " + anzahlGeloeschte);
 
     hs.ausgebenAlphabetisch();
   }
