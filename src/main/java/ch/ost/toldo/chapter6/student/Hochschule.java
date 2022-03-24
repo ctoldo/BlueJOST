@@ -68,10 +68,8 @@ public class Hochschule {
     while (it.hasNext()) {
       String emailAddress = it.next();
       Student student = studentenMap.get(emailAddress);
-      if (student.gibName().contains(suchString) || student.gibVorname().contains(suchString)) {
+      if (student.gibName().contains(suchString) || student.gibVorname().contains(suchString) || emailAddress.contains(suchString)) {
         it.remove();
-        studentenListe.remove(student);
-        studentenMap.remove(emailAddress);
         anzahlGeloeschte++;
       }
     }
