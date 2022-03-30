@@ -6,9 +6,7 @@
 package ch.ost.toldo.chapter6.technischerKundendienst1;
 
 
-import java.security.SecureRandom;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class StarterClass {
   public static void main(String[] args) {
@@ -16,7 +14,6 @@ public class StarterClass {
 //    aufgabe6_16();
 //    aufgabe6_17();
     aufgabe6_18();
-    SecureRandom secureRandom = new SecureRandom();
   }
 
   private static void start() {

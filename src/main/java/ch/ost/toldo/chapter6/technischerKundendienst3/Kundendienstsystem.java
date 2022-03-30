@@ -1,27 +1,26 @@
-package ch.ost.toldo.chapter6.technischerKundendienstAnalyse;
+package ch.ost.toldo.chapter6.technischerKundendienst3;
 
 import java.util.HashSet;
 
 /**
- * Diese Klasse implementiert ein System fÃ¼r einen technischen
- * Kundendienst. Es ist die Klasse der hÃ¶chsten Ebene dieses Projekts.
- * Das System kommuniziert mit dem Benutzer Ã¼ber die Konsole.
+ * Diese Klasse implementiert ein System für einen technischen
+ * Kundendienst. Das System kommuniziert mit dem Benutzer über 
+ * die Konsole.
  * 
  * Diese Klasse benutzt ein Exemplar der Klasse Eingabeleser, 
  * um Eingaben vom Benutzer zu lesen, und ein Exemplar der
  * Klasse Beantworter, um Antworten zu generieren.
- * In einer Schleife werden so lange Eingaben eingelesen und
- * Antworten auf diese Eingaben generiert, bis der Benutzer
- * das System verlÃ¤sst.
+ * In einer Schleife werden Eingaben eingelesen und Antworten
+ * auf diese Eingaben generiert, bis der Benutzer das System
+ * verlässt.
  * 
- * @author     Michael KÃ¶lling und David J. Barnes
- * @version    1.0 (2016.02.29)
+ * @author     Michael Kölling und David J. Barnes
+ * @version    0.1 (2016.02.29)
  */
 public class Kundendienstsystem
 {
     private Eingabeleser leser;
     private Beantworter beantworter;
-    private Wortzaehler zaehler;
     
     /**
      * Erzeuge ein Kundendienstsystem.
@@ -30,13 +29,12 @@ public class Kundendienstsystem
     {
         leser = new Eingabeleser();
         beantworter = new Beantworter();
-        zaehler = new Wortzaehler();
     }
 
     /**
-     * Starte das System fÃ¼r den technischen Kundendienst.
-     * Es wird ein BegrÃ¼ÃŸungstext ausgegeben und anschlieÃŸend
-     * ein Dialog mit dem Benutzer gefÃ¼hrt, bis der Benutzer
+     * Starte das System für den technischen Kundendienst.
+     * Es wird ein Begrüßungstext ausgegeben und anschließend
+     * ein Dialog mit dem Benutzer geführt, bis der Benutzer
      * den Dialog beendet.
      */
     public void starten()
@@ -49,12 +47,9 @@ public class Kundendienstsystem
             HashSet<String> eingabe = leser.gibEingabe();
 
             if(eingabe.contains("ade")) {
-                zaehler.zaehlungenAusgeben();
-                zaehler.unknownWordsZaehlerAusgeben(beantworter.getMapKeys());
                 fertig = true;
             }
             else {
-                zaehler.woerterHinzufuegen(eingabe);
                 String antwort = beantworter.generiereAntwort(eingabe);
                 System.out.println(antwort);
             }
@@ -71,9 +66,9 @@ public class Kundendienstsystem
                            " der Firma SeltsamSoft.");
         System.out.println();
         System.out.println("Bitte schildern Sie uns Ihr Problem.");
-        System.out.println("Wir werden Sie bestmÃ¶glich unterstÃ¼tzen.");
+        System.out.println("Wir werden Sie bestmöglich unterstützen.");
         System.out.println("Bitte tippen Sie 'ade', um unser System zu" +
-                           " verlassen.");    
+                           " verlassen.");
     }
 
     /**
@@ -81,6 +76,6 @@ public class Kundendienstsystem
      */
     private void abschiedstextAusgeben()
     {
-        System.out.println("Vielen Dank fÃ¼r das GesprÃ¤ch. Ade ...");
+        System.out.println("Vielen Dank für das Gespräch. Ade ...");
     }
 }

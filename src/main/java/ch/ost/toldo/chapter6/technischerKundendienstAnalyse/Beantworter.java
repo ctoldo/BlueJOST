@@ -1,10 +1,6 @@
 package ch.ost.toldo.chapter6.technischerKundendienstAnalyse;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Die Klasse Beantworter beschreibt Exemplare, die 
@@ -154,5 +150,9 @@ public class Beantworter
         // von null (inklusiv) bis zur Größe der Liste (exklusiv) liegen.
         int index = zufallsgenerator.nextInt(standardantworten.size());
         return standardantworten.get(index);
+    }
+
+    public Set<String> getMapKeys() {
+        return antwortMap.keySet();
     }
 }
