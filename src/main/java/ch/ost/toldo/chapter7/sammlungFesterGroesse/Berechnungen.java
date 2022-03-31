@@ -13,18 +13,18 @@ public class Berechnungen {
   /**
    * berechnet die Fakultät für die übergebene Zahl
    * und gibt die Rechnung und die Zwischenresultate aus.
-   * zahl muss folgendes erfüllen: 1 < zahl < 1000
+   * zahl muss folgendes erfüllen: 1 < zahl < 100
    *
    * @param zahl Zahl von der die Fakultät berechnet werden soll
    */
   public static void ausgebenFakultaet(int zahl) {
-    if (!(zahl > 1 && zahl < 1000)) {
-      System.out.println("Wert nicht innerhalb der unterstützen Range (2 - 999).");
+    if (!(zahl > 1 && zahl < 100)) {
+      System.out.println("Wert nicht innerhalb der unterstützen Range (2 - 99).");
       return;
     }
 
-    long fakultaet = 1;
-    long[] zwischenresultate = new long[zahl - 1];
+    double fakultaet = 1;
+    double[] zwischenresultate = new double[zahl - 1];
     System.out.print("1");
     for (int i = 2; i <= zahl; i++) {
       fakultaet *= i;
@@ -33,7 +33,7 @@ public class Berechnungen {
     }
     System.out.println(" = " + fakultaet);
 
-    for (long zwischenresultat : zwischenresultate) {
+    for (double zwischenresultat : zwischenresultate) {
       System.out.println(zwischenresultat);
     }
   }
