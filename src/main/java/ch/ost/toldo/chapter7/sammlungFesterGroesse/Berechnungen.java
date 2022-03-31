@@ -13,7 +13,7 @@ public class Berechnungen {
   /**
    * berechnet die Fakultät für die übergebene Zahl
    * und gibt die Rechnung und die Zwischenresultate aus.
-   * zahl muss folgendes erfüllen: 0 < zahl < 1000
+   * zahl muss folgendes erfüllen: 1 < zahl < 1000
    *
    * @param zahl Zahl von der die Fakultät berechnet werden soll
    */
