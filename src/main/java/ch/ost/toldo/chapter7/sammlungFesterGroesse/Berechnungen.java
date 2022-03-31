@@ -13,10 +13,16 @@ public class Berechnungen {
   /**
    * berechnet die Fakultät für die übergebene Zahl
    * und gibt die Rechnung und die Zwischenresultate aus.
+   * zahl muss folgendes erfüllen: 0 < zahl < 1000
    *
    * @param zahl Zahl von der die Fakultät berechnet werden soll
    */
   public static void ausgebenFakultaet(int zahl) {
+    if (!(zahl > 0 && zahl < 1000)){
+      System.out.println("Wert nicht innerhalb der unterstützen Range (1 - 999).");
+      return;
+    }
+
     long fakultaet = 1;
     long[] zwischenresultate = new long[zahl];
     for (int i = 1; i <= zahl; i++) {
