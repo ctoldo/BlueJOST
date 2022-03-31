@@ -6,6 +6,7 @@
 package ch.ost.toldo.chapter7.sammlungFesterGroesse;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Random;
 
 public class Berechnungen {
@@ -61,18 +62,33 @@ public class Berechnungen {
    * @param ausgeben ob, die Lottozahlen ausgegeben werden sollen?
    * @return lottozahlen
    */
-  public static ArrayList<Integer> gibLottozahlen(int anzahl, int maxWert, boolean ausgeben) {
-    ArrayList<Integer> lottozahlen = new ArrayList<>();
-    Random random = new Random();
+  public static int[] gibLottozahlen(int anzahl, int maxWert, boolean ausgeben) {
+    int[] lottozahlen = new int[anzahl];
     for (int i = 0; i < anzahl; i++) {
-      lottozahlen.add(random.nextInt(1, maxWert + 1));
-    }
-
-    if (ausgeben) {
-      for (Integer lottozahl : lottozahlen) {
+      int lottozahl = 0;
+      while (!isNewNumber(lottozahl, lottozahlen)) {
+        lottozahl = (int) (Math.random() * maxWert + 1);
+        //oder einfacher, aber ohne Math:
+        //Random random = new Random();
+        //lottozahl = random.nextInt(1, maxWert + 1);
+      }
+      lottozahlen[i] = lottozahl;
+      if (ausgeben) {
         System.out.println(lottozahl);
       }
     }
     return lottozahlen;
+  }
+
+  private static boolean isNewNumber(int lottozahl, int[] lottozahlen) {
+    if (lottozahl == 0) {
+      return false;
+    }
+    for (int lz : lottozahlen) {
+      if (lz == lottozahl) {
+        return false;
+      }
+    }
+    return true;
   }
 }

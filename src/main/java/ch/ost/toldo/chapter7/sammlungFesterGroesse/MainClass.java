@@ -7,8 +7,8 @@ package ch.ost.toldo.chapter7.sammlungFesterGroesse;
 
 public class MainClass {
   public static void main(String[] args) {
-    Berechnungen.ausgebenFakultaet(99);
+    //Berechnungen.ausgebenFakultaet(99);
     //Berechnungen.kreisBerechnungen(5);
-    //Berechnungen.gibLottozahlen(6, 30, true);
+    Berechnungen.gibLottozahlen(7, 42, true);
   }
 }
