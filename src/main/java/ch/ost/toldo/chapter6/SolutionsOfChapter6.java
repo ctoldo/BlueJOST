@@ -462,15 +462,117 @@ public class SolutionsOfChapter6 {
 
   /**
    * 6.71 / 6.72
-   * würde ich nicht probieren... relativ schwierig
+   * würde ich nicht probieren... relativ schwierig, selber nicht komplett gemacht
    * @see ch.ost.toldo.chapter6.baelle.KastenBall
    * @see ch.ost.toldo.chapter6.baelle.BallDemo#kastenSpringen(int)
    */
 
   /**
    * 6.73
-   *
+   * Die Bälle hüpfen weniger lange, da sie immer wengier abprallen
    */
 
+  /**
+   * 6.74
+   * public static final double TOLERANZ = 0.001;
+   * private static final int PROZENTSATZ_FUER_BESTEHEN = 40;
+   * public static final char HILFE = 'h';
+   */
 
+  /**
+   * 6.75
+   * Math.E = Eulersche Zahl
+   * Math.PI = Pi
+   * Math.RADIANS_TO_DEGREES für Umrechnung
+   * MATH.DEGREES_TO_RADIANS für Umrechnung
+   */
+
+  /**
+   * 6.76
+   * - Falls sich der Wert ändert, muss er nur an einem Ort geändert werden
+   * - Konstanten sind leserlicher als die Zahl selber, da klar ist für was die Zahl steht
+   * - Minimierung von Fehlerquellen durch Tippfehler
+   */
+
+  /**
+   * 6.77
+   * public static ... max (..., ...)
+   * wobei ... für den Datentyp steht -> möglich mit int, double, long, float
+   */
+
+  /**
+   * 6.78
+   * die sind statisch, damit kein Objekt erzeugt werden muss
+   * Die Klasse nimmt nur die zwei Werte und vergleicht diese, wäre daher unnötig viel Speicherplatz gebraucht, wenn eine Instanz erzeugt werden würde
+   * Es werden auch keine Instanzvariabeln gebraucht für diese Berechnungen
+   * Konstruktor mit private verbietet es von aussen eine Instanz davon zu erstellen
+   */
+
+  /**
+   * 6.79
+   * @see ch.ost.toldo.chapter6.somestuff.TimeCounter#main(String[])
+   */
+
+  /**
+   * 6.80
+   * Instanzmethode -> statische Methode = möglich
+   * Instanzmethode -> Instanzmethode = sofern in gleicher Instanz oder Instanz zum Zeitpunkt vorhanden
+   * statische Methode -> Instanzmethode = sofern in statischer Methode Instanz erzugt wird oder eine Instanz übegeben wird
+   * statische Methode -> statische Methode = möglich
+   * @see ch.ost.toldo.chapter6.somestuff.StaticTester
+   */
+
+  /**
+   * 6.81
+   * selber lesen
+   */
+
+  /**
+   * 6.82
+   * füge hinzu:
+   * public static void main (String[] args) {}
+   * aufruf aus BlueJ
+   */
+
+  /**
+   * 6.83
+   * 1. Eingabeaufforderung öffnen (cmd)
+   * 2. in Ordner, in der die Klasse abgelegt ist navigieren (oder cmd direkt dort öffnen) -> z.b. "cd C:\Users\toldo\bluejJProjects\technischerKundendienst1"
+   * 3. aufrufen von "java Kundendienst.java"
+   * wenn eine main in der Klasse definiert ist, startet das das Programm
+   */
+
+  /**
+   * 6.84
+   * 1. Konstante in Klasse z.B.
+   *    private static int INSTANCECOUNTER;
+   * 2. im Konstruktor die Zahl erhöhen
+   *    INSTANCECOUNTER++;
+   * 3. Getter-Methode schreiben
+   *    public static int anzahlInstanzen(){return INSTANCECOUNTER;}
+   */
+
+  /**
+   * 6.85 / 6.86
+   * nicht prüfungsrelevant da aufbauend auf Kapitel 5
+   * streams, lamda, etc. wird nicht kommen
+   */
+
+  /**
+   * 6.87
+   * @see ch.ost.toldo.chapter6.starwars.Namensgenerator#generiereStarWarsNamen(String, String, String, String)
+   */
+
+  /**
+   * 6.88
+   * s.toUpperCase() verändert den Inhalt von s nicht. Damit s in Grossbuchstaben gespeichert wäre müsste man dies machen:
+   * String uppercased = s.toUpperCase();
+   * System.out.println(uppercased);
+   */
+
+  /**
+   * 6.89
+   * Die Werte in den Parametern sind nur Kopien von den Variabeln, die übergeben werden.
+   * Somit werden diese gar nicht überschrieben. Überschrieben werden lediglich die Kopien innerhalb der Methode.
+   */
 }

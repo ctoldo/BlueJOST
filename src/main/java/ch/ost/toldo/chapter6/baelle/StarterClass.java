@@ -7,8 +7,8 @@ package ch.ost.toldo.chapter6.baelle;
 
 public class StarterClass {
   public static void main(String[] args) {
-    //aufgabe6_68();
-    aufgabe6_71();
+    aufgabe6_68();
+//    aufgabe6_71();
   }
 
   private static void aufgabe6_68() {
