@@ -8,6 +8,6 @@ package ch.ost.toldo.chapter8.woche07projekt;
 public class StarterClass {
 
   public static void main(String[] args) {
-    Kunde.testProzedur();
+    Kunde.testProzedur(10);
   }
 }

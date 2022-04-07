@@ -48,8 +48,7 @@ public class Kunde {
     }
   }
 
-  public static void testProzedur() {
-    int anzahl = 10;
+  public static void testProzedur(int anzahl) {
     Kunde[] kunden = new Kunde[anzahl];
 
     //Testobjekte erzeugen
