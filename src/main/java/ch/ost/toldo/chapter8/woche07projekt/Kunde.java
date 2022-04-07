@@ -33,6 +33,11 @@ public class Kunde {
   }
 
   public void displayKunde() {
+    if (kategorie == null) {
+      System.out.println("Es ist noch keine Kundenkategorie festgelegt!");
+      return;
+    }
+
     switch (kategorie) {
       case GROSSKUNDE:
         System.out.println(name + " hier etwas spezielles zu Grosskunde " + kategorie);
@@ -43,8 +48,6 @@ public class Kunde {
       case PRIVATKUNDE:
         System.out.println(name + " " + kategorie);
         break;
-      default:
-        System.out.println("Es ist noch keine Kundenkategorie festgelegt!");
     }
   }
 
@@ -55,7 +58,7 @@ public class Kunde {
     Random random = new Random();
     for (int i = 0; i < anzahl; i++) {
       Kunde kunde = new Kunde("Name" + (i + 1));
-      int randomChoice = random.nextInt(3);
+      int randomChoice = random.nextInt(4);
       switch (randomChoice) {
         case 0:
           kunde.setzeGrosskunde();
@@ -66,12 +69,14 @@ public class Kunde {
         case 2:
           kunde.setzePrivatkunde();
           break;
+        default:
+          break;
       }
       kunden[i] = kunde;
     }
 
     //Array rückwärts ausgeben
-    for (int i = kunden.length-1; i >= 0; i--) {
+    for (int i = kunden.length - 1; i >= 0; i--) {
       kunden[i].displayKunde();
       System.out.println();
     }
@@ -83,6 +88,7 @@ public class Kunde {
     display(KundenKategorie.GROSSKUNDE, kunden);
     display(KundenKategorie.KMUKUNDE, kunden);
     display(KundenKategorie.PRIVATKUNDE, kunden);
+    display(null, kunden);
   }
 
   private static void display(KundenKategorie kategorie, Kunde[] kunden) {
