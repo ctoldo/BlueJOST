@@ -5,7 +5,10 @@
  */
 package ch.ost.toldo.chapter8.woche07projekt;
 
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Random;
+import java.util.TreeMap;
 
 public class Kunde {
 
@@ -28,6 +31,10 @@ public class Kunde {
     kategorie = KundenKategorie.PRIVATKUNDE;
   }
 
+  public String getName() {
+    return name;
+  }
+
   public String getKategorie() {
     return kategorie.toString();
   }
@@ -40,13 +47,13 @@ public class Kunde {
 
     switch (kategorie) {
       case GROSSKUNDE:
-        System.out.println(name + " ist ein wichtiger" + kategorie);
+        System.out.println(name + " ist ein wichtiger " + kategorie);
         break;
       case KMUKUNDE:
         System.out.println(name + " ist " + kategorie);
         break;
       case PRIVATKUNDE:
-        System.out.println(name + " ist ein unwichtiger" + kategorie);
+        System.out.println(name + " ist ein unwichtiger " + kategorie);
         break;
     }
   }
@@ -83,17 +90,37 @@ public class Kunde {
 
     //Ausgabe soirtiert nach Kundenkategorie und Name
     System.out.println("Ausgabe sortiert nach Kundenkategorie - Name");
-    display(KundenKategorie.GROSSKUNDE, kunden);
-    display(KundenKategorie.KMUKUNDE, kunden);
-    display(KundenKategorie.PRIVATKUNDE, kunden);
+    TreeMap<String, Kunde> kundenMap = new TreeMap<>();
+    for (Kunde kunde : kunden) {
+      kundenMap.put(kunde.getKategorie() + " - " + kunde.getName(), kunde);
+    }
+
+    for(Iterator<String> it = kundenMap.keySet().iterator(); it.hasNext(); ){
+      String key = it.next();
+      Kunde kunde = kundenMap.get(key);
+      kunde.displayKunde();
+    }
+
+    //oder kompakt
+    //for(Iterator<String> it = kundenMap.keySet().iterator(); it.hasNext(); ){
+    //  kundenMap.get(it.next()).displayKunde();
+    //}
+
+    //oder
+    //Iterator<String> it = kundenMap.keySet().iterator();
+    //while (it.hasNext()) {
+    //  String key = it.next();
+    //  kundenMap.get(key).displayKunde();
+    //}
+
+    //oder
+    //for (Kunde kunde : kundenMap.values()) {
+    //  kunde.displayKunde();
+    //}
+
+
+
+
   }
 
-  private static void display(KundenKategorie kategorie, Kunde[] kunden) {
-    for (Kunde kunde : kunden) {
-      if (kunde.kategorie == kategorie) {
-        kunde.displayKunde();
-        System.out.println();
-      }
-    }
-  }
 }
