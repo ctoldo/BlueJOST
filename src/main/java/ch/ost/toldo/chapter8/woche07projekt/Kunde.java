@@ -34,19 +34,19 @@ public class Kunde {
 
   public void displayKunde() {
     if (kategorie == null) {
-      System.out.println("Es ist noch keine Kundenkategorie festgelegt!");
+      System.out.println(name + " ist noch keiner Kundenkategorie zugewiesen!");
       return;
     }
 
     switch (kategorie) {
       case GROSSKUNDE:
-        System.out.println(name + " hier etwas spezielles zu Grosskunde " + kategorie);
+        System.out.println(name + " ist ein wichtiger" + kategorie);
         break;
       case KMUKUNDE:
-        System.out.println(name + " hier etwas spezielles zu KMU " + kategorie);
+        System.out.println(name + " ist " + kategorie);
         break;
       case PRIVATKUNDE:
-        System.out.println(name + " " + kategorie);
+        System.out.println(name + " ist ein unwichtiger" + kategorie);
         break;
     }
   }
