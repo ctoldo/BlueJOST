@@ -86,7 +86,6 @@ public class Kunde {
     display(KundenKategorie.GROSSKUNDE, kunden);
     display(KundenKategorie.KMUKUNDE, kunden);
     display(KundenKategorie.PRIVATKUNDE, kunden);
-    display(null, kunden);
   }
 
   private static void display(KundenKategorie kategorie, Kunde[] kunden) {
