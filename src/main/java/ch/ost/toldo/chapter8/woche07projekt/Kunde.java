@@ -69,8 +69,6 @@ public class Kunde {
         case 2:
           kunde.setzePrivatkunde();
           break;
-        default:
-          break;
       }
       kunden[i] = kunde;
     }
