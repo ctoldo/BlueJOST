@@ -58,7 +58,7 @@ public class Kunde {
     Random random = new Random();
     for (int i = 0; i < anzahl; i++) {
       Kunde kunde = new Kunde("Name" + (i + 1));
-      int randomChoice = random.nextInt(4);
+      int randomChoice = random.nextInt(3);
       switch (randomChoice) {
         case 0:
           kunde.setzeGrosskunde();
