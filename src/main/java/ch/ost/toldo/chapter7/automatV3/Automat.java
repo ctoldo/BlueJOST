@@ -1,0 +1,91 @@
+package ch.ost.toldo.chapter7.automatV3;
+
+import java.util.*;
+
+/**
+ * Modelliert einen eindimensionalen elementaren zellulären Automaten.
+ * 
+ * @author David J. Barnes und Michael Kölling
+ * @version  2016.02.29 - Version 3
+ */
+public class Automat
+{
+    // Die Anzahl der Zellen.
+    private final int anzahlZellen;
+    // Der Zustand der Zellen.
+    private int[] zustand;
+    
+    /**
+     * Erzeuge einen eindimensionalen Automaten, der aus der angegebenen
+     * Anzahl an Zellen besteht.
+     * @param anzahlZellen  die Anzahl der Zellen im Automaten
+     */
+    public Automat(int anzahlZellen)
+    {
+        this.anzahlZellen = anzahlZellen;
+        // ein zusätzliches Element zulassen, um Zaunpfahlfehler zu vermeiden
+        zustand = new int[anzahlZellen + 1];
+        // den Automaten einrichten mit einer einzelnen 'an'-Zelle in der Mitte
+        zustand[anzahlZellen / 2] = 1;
+    }
+    
+    /**
+     * Gib den akutellen Zustand des Automaten aus.
+     */
+    public void ausgeben()
+    {
+        for(int zellenwert : zustand) {
+            System.out.print(zellenwert == 1 ? "*" : " ");
+        }
+        System.out.println();
+    }   
+    
+    /**
+     * Aktualisiere den Automaten auf seinen nächsten Zustand.
+     */
+    public void aktualisieren()
+    {
+        // Baut den neuen Zustand in einem anderen Array auf.
+        int[] naechsterZustand = new int[zustand.length];
+        // 0 verwenden für den nicht existierenden Wert 
+        // links von der ersten Zelle
+        int links = 0;
+        int zentrum = zustand[0];
+        for(int i = 0; i < anzahlZellen; i++) {
+            int rechts = zustand[i + 1];
+            naechsterZustand[i] = berechneNaechstenZustand(links, zentrum, rechts);
+            links = zentrum;
+            zentrum = rechts;
+        }
+        
+        zustand = naechsterZustand;
+    }
+    
+    /**
+     * Setze den Automaten zurück.
+     */
+    public void zuruecksetzen()
+    {
+        Arrays.fill(zustand, 0);
+        // den Automaten einrichten mit einer einzelnen 'an'-Zelle.
+        zustand[anzahlZellen / 2] = 1;
+            
+    }
+
+    /**
+     * Berechne den nächsten Zustand der Zelle im Zentrum
+     * anhand der Werte der aktuellen linken, zentralen und 
+     * rechten Zelle.
+     * Damit wird Wolframcode 110 implementiert.
+     * @see    https://en.wikipedia.org/wiki/Wolfram_code
+     * @param links    der Zustand der Zelle links vom Zentrum
+     * @param zentrum  der Zustand der Zelle im Zentrum
+     * @param rechts   der Zustand der Zelle rechts vom Zentrum
+     * @return         den neuen Wert des Zentrums (0 oder 1)
+     */
+    private int berechneNaechstenZustand(int links, int zentrum, int rechts)
+    {
+        return (zentrum + rechts + zentrum * rechts + links * zentrum * rechts) % 2;
+    }
+
+}

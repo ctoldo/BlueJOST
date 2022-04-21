@@ -67,6 +67,12 @@ public class MusikSammlung {
     for (String dateiname : dateien) {
       System.out.println(dateiname);
     }
+
+    /* Aufgabe 7.23
+    for (int i = 0; i < dateien.size(); i++) {
+      System.out.println(dateien.get(i));
+    }
+     */
   }
 
   public void bestimmteDateienAusgeben(String suchbegriff) {

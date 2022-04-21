@@ -8,7 +8,7 @@ package ch.ost.toldo.test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class TestPerson {
+class PersonTest {
 
   @Test
   void testSetterAndGetter() {

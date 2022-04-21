@@ -7,9 +7,8 @@ package ch.ost.toldo.test;
 
 public class SomeTestStuff {
   public static void main(String[] args) {
-    String s = "Ich:bin:ein:Berliner";
-    String[] split = s.split(":");
-    System.out.println(split[0]);
-
+    String s = "Claudio";
+    System.out.println(s.substring(0, 4));
+    System.out.println(s.substring(4));
   }
 }
