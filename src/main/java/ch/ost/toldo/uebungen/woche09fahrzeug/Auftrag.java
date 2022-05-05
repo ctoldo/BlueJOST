@@ -1,6 +1,6 @@
 package ch.ost.toldo.uebungen.woche09fahrzeug;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 
 /**
  * @author Claudio Toldo
@@ -9,10 +9,10 @@ import java.util.ArrayList;
  */
 public class Auftrag {
 
-  private final ArrayList<Fahrzeug> fahrzeugListe;
+  private final HashSet<Fahrzeug> fahrzeugListe;
 
   public Auftrag() {
-    fahrzeugListe = new ArrayList<>();
+    fahrzeugListe = new HashSet<>();
   }
 
   public void testObjekteErstellen() {
